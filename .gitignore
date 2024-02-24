@@ -2,3 +2,4 @@
 .vscode
 berylium_templates
 */.env
+*/*/__pycache__
