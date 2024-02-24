@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from main.models import pic_slider, main
 
-def index(reqest):
-    return render(reqest,"main/index.html")
+def index(request):
+    slides = pic_slider.objects.all()
+    pictures = main.objects.all()
+    return render(request,"main/index.html",{"slides":slides,'pictures':pictures})

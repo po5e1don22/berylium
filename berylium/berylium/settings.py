@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-from django.conf.global_settings import STATICFILES_DIRS
+from django.conf.global_settings import MEDIA_ROOT, MEDIA_URL, STATICFILES_DIRS
 from dotenv import load_dotenv
 from pathlib import Path
 import os
@@ -125,6 +125,10 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS=[
     BASE_DIR/ "static",
 ]
+
+MEDIA_ROOT = 'images'
+
+MEDIA_URL = 'images/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

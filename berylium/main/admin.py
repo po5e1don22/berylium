@@ -1,3 +1,6 @@
 from django.contrib import admin
+from main.models import main, pic_slider
 
-# Register your models here.
+
+admin.site.register(main)
+admin.site.register(pic_slider)
