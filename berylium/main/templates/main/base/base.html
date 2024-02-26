@@ -70,7 +70,7 @@
 							<li class="active"><a href="{% url "main:index" %}">Home</a></li>
 							<li><a href="{% url "about:about" %}">About</a></li>
 							<li class="has-dropdown">
-								<a href="services.html">Services</a>
+								<a href="{% url "service:service" %}">Services</a>
 								<ul class="dropdown">
 									<li><a href="#">Web Design</a></li>
 									<li><a href="#">eCommerce</a></li>
@@ -95,6 +95,7 @@
 				
 			</div>
 		</nav>
+		
 {% block content %}
 
 {% endblock  %}
@@ -198,7 +199,7 @@
 							<div class="col-md-6 gtco-footer-link">
 								<h3>Links</h3>
 								<ul class="gtco-list-link">
-									<li><a href="#">Home</a></li>
+									<li><a href="{% url "main:index" %}">Home</a></li>
 									<li><a href="#">Features</a></li>
 									<li><a href="#">Products</a></li>
 									<li><a href="#">Testimonial</a></li>
