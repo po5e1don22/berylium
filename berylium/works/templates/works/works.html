@@ -1,0 +1,36 @@
+{% extends "main/base/base.html" %}
+{% load static %}
+
+
+{% block content %}
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row gtco-heading">
+					<div class="col-md-7 text-left">
+						<h2>Works</h2>
+						<p>{{info.text}}</p>
+					</div>
+					<div class="col-md-3 col-md-push-2 text-center">
+						<p class="mt-md"><a href="#" class="btn btn-special btn-block">Contact us</a></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="owl-carousel owl-carousel-carousel">
+
+							{% for slide in sliders %}
+								<div class="item">
+									<div class="gtco-item">
+										<a href="#"><img src="{{slide.img.url}}" alt="" class="img-responsive"></a>
+										<h2><a href="#">{{slide.place_of_interest}}</h2></a>
+										<p class="role">{{slide.location}}</p>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}
